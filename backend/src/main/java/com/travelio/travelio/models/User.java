@@ -45,8 +45,9 @@ public class User implements UserDetails {
     public User() {
     }
 
-    public User(String name, String email, String password, Role role) {
+    public User(String name, String phone, String email, String password, Role role) {
         this.name = name;
+        this.phone = phone;
         this.email = email;
         this.password = password;
         this.role = role;
@@ -66,6 +67,14 @@ public class User implements UserDetails {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getEmail() {
