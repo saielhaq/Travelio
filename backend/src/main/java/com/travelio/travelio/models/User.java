@@ -32,6 +32,9 @@ public class User implements UserDetails {
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Column(name = "phone", nullable = false)
+    private String phone;
+
     @Column(name = "email", nullable = false)
     private String email;
     private String password;
