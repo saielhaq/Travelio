@@ -52,9 +52,9 @@ public class DestinationServiceImpl implements DestinationService {
     @Override
     public List<String> getCitiesByCountry(String country) {
         return destinationRepository.findByCountry(country)
-                                    .orElse(Collections.emptyList())
-                                    .stream()
-                                    .map(Destination::getCity)
-                                    .collect(Collectors.toList());
+                .orElse(Collections.emptyList())
+                .stream()
+                .map(Destination::getCity)
+                .collect(Collectors.toList());
     }
 }
